@@ -1,5 +1,5 @@
 import { fetchGptTranslation } from "./fetchGpt";
-import { loadEnv } from "./lib/loadEnv";
+import { loadEnv } from "../lib/loadEnv";
 
 const env = loadEnv();
 const apiToken = env.OPENAI_API_KEY;
