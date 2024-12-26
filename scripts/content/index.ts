@@ -1,13 +1,8 @@
 import { fetchGptTranslation } from "./fetchGpt";
-import {
-  TRANSLATE_LANGUAGE,
-  TRANSLATE_LENGTH,
-  OPENAI_API_KEY,
-} from "../lib/env";
+import { TRANSLATE_LENGTH, OPENAI_API_KEY } from "../lib/env";
 
 const apiToken = OPENAI_API_KEY;
 const translateLength = parseInt(TRANSLATE_LENGTH, 10);
-const translateLanguages = TRANSLATE_LANGUAGE;
 
 let lastSelectedText: string = "";
 
@@ -41,7 +36,7 @@ function createPopup(
 
   document.body.appendChild(popup);
 
-  fetchGptTranslation(selectedText, apiToken, translateLanguages)
+  fetchGptTranslation(selectedText, apiToken)
     .then(function (translatedText: string) {
       popup.innerText = translatedText;
     })

@@ -1,13 +1,14 @@
+import { prompt } from "../lib/prompt";
+
 export async function fetchGptTranslation(
   text: string,
-  apiToken: string,
-  translateLanguages: string
+  apiToken: string
 ): Promise<string> {
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${apiToken}`, // トークンを使用
+      Authorization: `Bearer ${apiToken}`,
     },
     body: JSON.stringify({
       model: "gpt-4o",
@@ -15,7 +16,7 @@ export async function fetchGptTranslation(
       messages: [
         {
           role: "system",
-          content: `You are a helpful assistant. Translate the following text to ${translateLanguages}.`,
+          content: prompt,
         },
         {
           role: "user",
