@@ -11,8 +11,8 @@ function createTranslateButton(selectedText: string, event: MouseEvent) {
   translateButton.id = "translate-button";
   translateButton.classList.add("translate-button");
   translateButton.innerText = "Translate";
-  translateButton.style.top = event.pageY + "px";
-  translateButton.style.left = event.pageX + "px";
+  translateButton.style.top = event.pageY + 3 + "px";
+  translateButton.style.left = event.pageX + 10 + "px";
 
   document.body.appendChild(translateButton);
 
