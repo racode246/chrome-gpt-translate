@@ -41,10 +41,10 @@ This extension is a Chrome extension for translating selected text using GPT.
    npm install
    ```
 
-2. Create a `.env` file in the root directory and add the following configuration:
+2. env.ts file in the root directory and add the following configuration:
 
-   ```env
-   GPT_API_KEY=your_gpt_api_key_here
+   ```env.ts
+   const OPENAI_API_KEY=your_gpt_api_key_here
    ```
 
 3. Run the development build.

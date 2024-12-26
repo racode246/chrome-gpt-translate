@@ -1,10 +1,13 @@
 import { fetchGptTranslation } from "./fetchGpt";
-import { loadEnv } from "../lib/loadEnv";
+import {
+  TRANSLATE_LANGUAGE,
+  TRANSLATE_LENGTH,
+  OPENAI_API_KEY,
+} from "../lib/env";
 
-const env = loadEnv();
-const apiToken = env.OPENAI_API_KEY;
-const translateLength = parseInt(env.TRANSLATE_LENGTH, 10);
-const translateLanguages = env.TRANSLATE_LANGUAGE;
+const apiToken = OPENAI_API_KEY;
+const translateLength = parseInt(TRANSLATE_LENGTH, 10);
+const translateLanguages = TRANSLATE_LANGUAGE;
 
 let lastSelectedText: string = "";
 
