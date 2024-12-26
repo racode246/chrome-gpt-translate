@@ -41,16 +41,16 @@ This extension is a Chrome extension for translating selected text using GPT.
    npm install
    ```
 
-2. Run the development build.
-
-   ```sh
-   npm run build
-   ```
-
-3. Create a `.env` file in the root directory and add the following configuration:
+2. Create a `.env` file in the root directory and add the following configuration:
 
    ```env
    GPT_API_KEY=your_gpt_api_key_here
+   ```
+
+3. Run the development build.
+
+   ```sh
+   npm run build
    ```
 
 ### Folder Structure
